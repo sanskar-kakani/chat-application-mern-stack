@@ -1,5 +1,6 @@
 const express = require("express");
 const connectDB = require("./config/db");
+const cors = require("cors");
 const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
@@ -9,13 +10,14 @@ const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 connectDB();
 const app = express();
 
-app.use(cors(
-    {
-        origin: ["https://chat-application-frontend-chi.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+
+app.use(
+  cors({
+    origin: "https://chat-application-frontend-chi.vercel.app",
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 app.use(express.json()); // to accept json data
 
