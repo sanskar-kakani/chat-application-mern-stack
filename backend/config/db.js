@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 const colors = require("colors");
 
+const url = "mongodb+srv://sanskarkakani01:sanskarkakani01@chat-application.09k9asx.mongodb.net/?retryWrites=true&w=majority"
+
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
+    const conn = await mongoose.connect(url, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
