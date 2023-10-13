@@ -40,8 +40,14 @@ const Login = () => {
         },
       };
 
+      // const { data } = await axios.post(
+      //   "/api/user/login",
+      //   { email, password },
+      //   config
+      // );
+
       const { data } = await axios.post(
-        "/api/user/login",
+        "https://chat-application-backend-psi.vercel.app/api/user/login",
         { email, password },
         config
       );
