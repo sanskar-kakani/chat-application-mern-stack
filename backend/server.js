@@ -19,6 +19,8 @@ app.use(
   })
 );
 
+app.options("*", cors());
+
 app.use(express.json()); // to accept json data
 
 app.use("/api/user", userRoutes);
