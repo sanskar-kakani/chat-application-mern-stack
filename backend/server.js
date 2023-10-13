@@ -11,7 +11,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin: ["https://chat-application-frontend-chi.vercel.app/"],
+        origin: ["https://chat-application-frontend-chi.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
