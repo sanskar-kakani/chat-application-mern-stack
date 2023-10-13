@@ -1,3 +1,6 @@
 /node_modules
 node_modules/
 /frontend/node_modules/
+
+
+"build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
