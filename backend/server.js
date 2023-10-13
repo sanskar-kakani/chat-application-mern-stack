@@ -9,6 +9,14 @@ const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 connectDB();
 const app = express();
 
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
+
 app.use(express.json()); // to accept json data
 
 app.use("/api/user", userRoutes);
