@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
+    // "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [
     "mern",
@@ -17,7 +17,6 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
-    "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
